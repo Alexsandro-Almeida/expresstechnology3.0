@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Express Technology desenvolve sites, sistemas, aplicativos, automações, IA e cyber segurança para empresas que querem vender mais e operar melhor.">
+    <title>Express Technology | Full Stack, IA, Automação e Cyber Segurança</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg class="icon-sprite" aria-hidden="true">
+        <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 20 5.5v6.2c0 5-3.2 8.6-8 10.3-4.8-1.7-8-5.3-8-10.3V5.5L12 2Zm0 3.2L7 7.4v4.3c0 3.1 1.8 5.6 5 7 3.2-1.4 5-3.9 5-7V7.4l-5-2.2Z"/></symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8.7 16.6-5-4.6 5-4.6 1.7 1.9L7.5 12l2.9 2.7-1.7 1.9Zm6.6 0-1.7-1.9 2.9-2.7-2.9-2.7 1.7-1.9 5 4.6-5 4.6ZM11.2 20l-2.4-.8L12.8 4l2.4.8L11.2 20Z"/></symbol>
+        <symbol id="icon-bot" viewBox="0 0 24 24"><path d="M11 2h2v3h3a4 4 0 0 1 4 4v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h3V2Zm-3 6a1.5 1.5 0 0 0-1.5 1.5V16A1.5 1.5 0 0 0 8 17.5h8a1.5 1.5 0 0 0 1.5-1.5V9.5A1.5 1.5 0 0 0 16 8H8Zm1.5 3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Zm5 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></symbol>
+        <symbol id="icon-zap" viewBox="0 0 24 24"><path d="M13.4 2 4 13.2h6.3L9.1 22 20 9.3h-6.6L13.4 2Z"/></symbol>
+        <symbol id="icon-app" viewBox="0 0 24 24"><path d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3Zm0 3v14h8V5H8Zm3 12h2v1.5h-2V17Z"/></symbol>
+        <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 19h16v2H2V3h2v16Zm3-2V9h3v8H7Zm5 0V5h3v12h-3Zm5 0v-6h3v6h-3Z"/></symbol>
+        <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M13 5 20 12l-7 7-1.7-1.7 4-4.1H4v-2.4h11.3l-4-4.1L13 5Z"/></symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm1.1 3.2v4l3.1 2.1-1.2 1.9-4.4-3V7.7h2.5Z"/></symbol>
+    </svg>
+
+    <div class="ambient-light" aria-hidden="true"></div>
+    <div class="ext-tooltip" id="ext-tooltip" aria-hidden="true"></div>
+
+    <header class="site-header" id="main-header" data-ext-tip="Menu principal: acesse soluções, tecnologias, projetos em breve e contato direto com a Express Technology.">
+        <a class="brand magnetic" href="#home" aria-label="Express Technology" data-ext-tip="Express Technology: desenvolvimento premium para empresas que querem tecnologia de verdade.">
+            <img src="assets/logo.png" alt="Express Technology">
+            <span>Express Technology</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+            <a href="#home" data-ext-tip="Voltar para a primeira impressão do site: proposta, promessa e chamada para ação.">Início</a>
+            <a href="#indices" data-ext-tip="Números e garantias que reforçam experiência, clientes atendidos, segurança e profissionalismo.">Índices</a>
+            <a href="#services" data-ext-tip="Veja os serviços que podem virar contrato: cyber segurança, full stack, IA, automações, apps e programas.">Soluções</a>
+            <a href="#trust" data-ext-tip="Provas de confiança para mostrar que o projeto não é só bonito: ele precisa funcionar e dar segurança.">Confiança</a>
+            <a href="#technologies" data-ext-tip="Stack técnica usada para criar projetos modernos, rápidos e preparados para crescer.">Tecnologias</a>
+            <a href="#projects" data-ext-tip="Portfólio atualizado em modo prévia. Em breve você poderá abrir sites, galerias e cases completos.">Projetos</a>
+            <a href="#contact" data-ext-tip="Área de conversão: WhatsApp, Instagram, e-mail e briefing pelo EXT.">Contato</a>
+        </nav>
+
+        <a class="header-cta magnetic" href="https://wa.me/5593981137014?text=Olá,%20vim%20pelo%20site%20da%20Express%20Technology%20e%20quero%20contratar%20um%20serviço." target="_blank" rel="noreferrer" data-ext-tip="Atalho direto para iniciar uma conversa comercial pelo WhatsApp.">
+            Falar agora
+        </a>
+
+        <button class="menu-toggle magnetic" type="button" aria-label="Abrir menu" aria-expanded="false" data-ext-tip="Abre o menu de navegação no celular.">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero section-panel" id="home">
+            <img class="hero-media" src="assets/hero-command-center.png" alt="">
+            <canvas class="motion-canvas" id="hero-motion" aria-hidden="true"></canvas>
+            <div class="hero-overlay"></div>
+            <div class="hero-planet" aria-hidden="true"></div>
+
+            <div class="hero-content" data-ext-tip="Esta é a proposta principal: transformar ideias em sistemas, automações e vendas digitais.">
+                <p class="eyebrow hero-fade">Full stack • IA • Automação • Cyber segurança</p>
+                <h1 class="typewriter-title" data-typewrite="Tecnologia sob medida.">Tecnologia sob medida.</h1>
+                <p class="hero-copy hero-fade">
+                    Sites, sistemas, apps e IA para vender mais, automatizar processos e operar melhor.
+                </p>
+                <div class="hero-actions hero-fade">
+                    <a class="btn primary magnetic" href="#contact" data-ext-tip="Comece pelo contato: o objetivo é transformar sua ideia em briefing e orçamento.">
+                        Quero contratar
+                        <svg><use href="#icon-arrow"></use></svg>
+                    </a>
+                    <button class="btn secondary magnetic" type="button" data-open-chat data-ext-tip="Abra o EXT para receber orientação rápida sobre o melhor serviço para o seu projeto.">
+                        Conversar com o EXT
+                        <svg><use href="#icon-bot"></use></svg>
+                    </button>
+                </div>
+                <div class="hero-metrics hero-fade" aria-label="Diferenciais">
+                    <span data-ext-tip="IA aplicada para atendimento, automação, triagem e produtividade."><strong>IA</strong> aplicada</span>
+                    <span data-ext-tip="Desenvolvimento completo: interface, lógica, banco de dados e integrações."><strong>Full Stack</strong></span>
+                    <span data-ext-tip="Segurança pensada desde autenticação até proteção de dados."><strong>Cyber</strong> segurança</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro section-panel reveal" aria-label="Resumo da empresa" data-ext-tip="Resumo comercial: a Express Technology cria soluções completas, não apenas telas bonitas.">
+            <div>
+                <p class="eyebrow">Tecnologia para converter</p>
+                <h2>Seu cliente precisa entender, confiar e chamar você.</h2>
+            </div>
+            <p>
+                Cada página, sistema ou automação é desenhado para reduzir dúvida, acelerar atendimento e gerar ação. O foco é simples: presença digital premium com funcionalidade real.
+            </p>
+        </section>
+
+        <section class="indices section-panel" id="indices">
+            <div class="section-heading centered reveal" data-ext-tip="Índices de confiança: experiência, clientes, garantia, segurança e profissionalismo para reduzir dúvida antes do contato.">
+                <p class="eyebrow">Índices de confiança</p>
+                <h2>Números que falam por si.</h2>
+                <p>Trajetória, entrega e compromisso reunidos em indicadores simples para o cliente decidir com mais segurança.</p>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card reveal tilt-card" data-ext-tip="Mais de 8 anos de experiência significam maturidade para entender problemas reais e entregar soluções mais seguras.">
+                    <svg><use href="#icon-clock"></use></svg>
+                    <strong>+8</strong>
+                    <span>Anos de experiência</span>
+                </article>
+                <article class="stat-card reveal tilt-card" data-ext-tip="Mais de 50 clientes satisfeitos reforçam que a Express Technology já entrega valor em projetos reais.">
+                    <svg><use href="#icon-chart"></use></svg>
+                    <strong>+50</strong>
+                    <span>Clientes satisfeitos</span>
+                </article>
+                <article class="stat-card reveal tilt-card" data-ext-tip="Garantia de serviço: a entrega não termina no envio do arquivo, existe cuidado com funcionamento e ajustes.">
+                    <svg><use href="#icon-shield"></use></svg>
+                    <strong>100%</strong>
+                    <span>Garantia do serviço</span>
+                </article>
+                <article class="stat-card reveal tilt-card" data-ext-tip="Segurança e profissionalismo entram no projeto desde o início, não como detalhe de última hora.">
+                    <svg><use href="#icon-code"></use></svg>
+                    <strong>24/7</strong>
+                    <span>Projetos online e seguros</span>
+                </article>
+            </div>
+
+            <p class="indices-note reveal">
+                Mais de <strong>8 anos</strong> criando soluções digitais com <strong>profissionalismo</strong>, <strong>segurança</strong> e foco em clientes satisfeitos.
+            </p>
+        </section>
+
+        <section class="trust section-panel" id="trust">
+            <div class="section-heading reveal" data-ext-tip="Essas provas reduzem insegurança do cliente e mostram como a entrega fica mais completa.">
+                <p class="eyebrow">Por que contratar</p>
+                <h2>Entrega pensada para funcionar depois que o site sai do ar de apresentação.</h2>
+                <p>Design premium chama atenção. Estrutura técnica, segurança e atendimento transformam atenção em cliente.</p>
+            </div>
+            <div class="trust-grid">
+                <article class="trust-card reveal tilt-card" data-ext-tip="Projeto responsivo: a experiência precisa ficar boa no celular, tablet e computador.">
+                    <svg><use href="#icon-app"></use></svg>
+                    <h3>Responsivo de verdade</h3>
+                    <p>Interfaces pensadas para celular, desktop e uso real, sem quebrar layout no momento mais importante.</p>
+                </article>
+                <article class="trust-card reveal tilt-card" data-ext-tip="Atendimento direto: menos ruído, mais clareza no que será entregue.">
+                    <svg><use href="#icon-bot"></use></svg>
+                    <h3>Atendimento direto</h3>
+                    <p>Briefing, orientação e comunicação objetiva para o cliente saber o próximo passo sem ficar perdido.</p>
+                </article>
+                <article class="trust-card reveal tilt-card" data-ext-tip="Projeto sob medida: o sistema se adapta ao negócio, não o contrário.">
+                    <svg><use href="#icon-code"></use></svg>
+                    <h3>Sob medida</h3>
+                    <p>Sites, sistemas e apps desenhados para a rotina do negócio, com funcionalidades que fazem sentido.</p>
+                </article>
+                <article class="trust-card reveal tilt-card" data-ext-tip="Integrações: o projeto conversa com ferramentas externas e acelera a operação.">
+                    <svg><use href="#icon-zap"></use></svg>
+                    <h3>Integrações úteis</h3>
+                    <p>WhatsApp, APIs, formulários, bancos, painéis e automações trabalhando no mesmo fluxo.</p>
+                </article>
+                <article class="trust-card reveal tilt-card" data-ext-tip="Painel administrativo: quando o cliente precisa controlar dados sem depender de alteração manual.">
+                    <svg><use href="#icon-chart"></use></svg>
+                    <h3>Painéis e gestão</h3>
+                    <p>Dashboards, cadastros e controles internos para acompanhar informações com mais autonomia.</p>
+                </article>
+                <article class="trust-card reveal tilt-card" data-ext-tip="Suporte pós-entrega: projeto bom precisa continuar saudável depois da publicação.">
+                    <svg><use href="#icon-shield"></use></svg>
+                    <h3>Suporte pós-entrega</h3>
+                    <p>Orientação, ajustes e evolução para manter o projeto seguro, atualizado e útil.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="solutions section-panel" id="services">
+            <div class="section-heading reveal" data-ext-tip="Aqui estão os serviços principais, organizados para o cliente identificar rapidamente o que precisa contratar.">
+                <p class="eyebrow">Nossos serviços</p>
+                <h2>Soluções digitais para vender, proteger e automatizar.</h2>
+                <p>Escolha um serviço isolado ou construa um projeto completo com estratégia, design, programação e atendimento inteligente.</p>
+            </div>
+
+            <div class="solution-grid">
+                <article class="solution-card reveal tilt-card" data-ext-tip="Cyber segurança: proteção, análise de riscos, autenticação, backups e orientação para evitar prejuízos digitais.">
+                    <div class="icon-badge"><svg><use href="#icon-shield"></use></svg></div>
+                    <span class="card-index">01</span>
+                    <h3>Cyber segurança</h3>
+                    <p>Fortaleça seus dados, acessos e sistemas com boas práticas, revisão de vulnerabilidades e orientação técnica para crescer com confiança.</p>
+                    <a href="#contact">Proteger meu negócio</a>
+                </article>
+                <article class="solution-card reveal tilt-card" data-ext-tip="Full stack: criação completa de sites, sistemas, painéis e plataformas com frontend, backend e banco de dados.">
+                    <div class="icon-badge"><svg><use href="#icon-code"></use></svg></div>
+                    <span class="card-index">02</span>
+                    <h3>Programação Full Stack</h3>
+                    <p>Desenvolvimento de ponta a ponta: interfaces premium, APIs, banco de dados, dashboards, integrações e deploy.</p>
+                    <a href="#contact">Criar meu sistema</a>
+                </article>
+                <article class="solution-card reveal tilt-card" data-ext-tip="Automação: ideal para eliminar tarefas repetitivas, organizar dados e acelerar processos internos.">
+                    <div class="icon-badge"><svg><use href="#icon-zap"></use></svg></div>
+                    <span class="card-index">03</span>
+                    <h3>Automações</h3>
+                    <p>Fluxos automáticos para atendimento, relatórios, mensagens, cadastros, planilhas, notificações e operação comercial.</p>
+                    <a href="#contact">Automatizar processos</a>
+                </article>
+                <article class="solution-card reveal tilt-card" data-ext-tip="IA: bots, assistentes e recursos inteligentes para atender clientes, qualificar leads e apoiar decisões.">
+                    <div class="icon-badge"><svg><use href="#icon-bot"></use></svg></div>
+                    <span class="card-index">04</span>
+                    <h3>IA e bots inteligentes</h3>
+                    <p>Assistentes como o EXT para conversar com visitantes, coletar briefing, responder dúvidas e encaminhar oportunidades.</p>
+                    <a href="#ext">Testar o EXT</a>
+                </article>
+                <article class="solution-card reveal tilt-card" data-ext-tip="Programas sob medida: softwares criados para a rotina específica da empresa, sem depender de ferramentas genéricas.">
+                    <div class="icon-badge"><svg><use href="#icon-chart"></use></svg></div>
+                    <span class="card-index">05</span>
+                    <h3>Programas sob medida</h3>
+                    <p>Controle financeiro, gestão, vendas, assinaturas, cadastros e rotinas internas transformadas em software profissional.</p>
+                    <a href="#contact">Planejar meu programa</a>
+                </article>
+                <article class="solution-card reveal tilt-card" data-ext-tip="Aplicativos: experiências mobile para clientes, equipes, vendas, serviços, campo e gestão.">
+                    <div class="icon-badge"><svg><use href="#icon-app"></use></svg></div>
+                    <span class="card-index">06</span>
+                    <h3>Aplicativos</h3>
+                    <p>Apps com login, dados, notificações, painéis, integração com APIs e experiência pensada para uso real.</p>
+                    <a href="#contact">Criar meu app</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="ai-band section-panel" id="ext">
+            <img src="assets/ext-ai-network.png" alt="" class="ai-band-media">
+            <canvas class="motion-canvas" id="ai-motion" aria-hidden="true"></canvas>
+            <div class="ai-band-content reveal" data-ext-tip="Esta seção apresenta o EXT, o assistente que guia visitantes e ajuda a converter interesse em contato.">
+                <p class="eyebrow">EXT online</p>
+                <h2>Um assistente que acompanha o visitante pelo site inteiro.</h2>
+                <p>
+                    Passe o mouse nos elementos e o EXT explica cada área. No chat, ele entende intenção, recomenda serviços, monta briefing e prepara a conversa no WhatsApp.
+                </p>
+                <button class="btn primary magnetic" type="button" data-open-chat data-ext-tip="Teste o chat do EXT e veja como ele pode atender futuros clientes no seu site.">
+                    Testar o EXT
+                    <svg><use href="#icon-bot"></use></svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="technologies section-panel" id="technologies">
+            <div class="section-heading reveal" data-ext-tip="A stack mostra que a Express Technology trabalha com tecnologias atuais para construir projetos robustos.">
+                <p class="eyebrow">Stack atual</p>
+                <h2>Tecnologias para projetos rápidos, seguros e escaláveis.</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-pill reveal" data-ext-tip="HTML5 estrutura páginas semânticas e compatíveis com SEO."><img src="assets/html.png" alt="">HTML5</div>
+                <div class="tech-pill reveal" data-ext-tip="CSS3 cria interfaces responsivas, animações e design premium."><img src="assets/css-3.png" alt="">CSS3</div>
+                <div class="tech-pill reveal" data-ext-tip="JavaScript dá vida ao site, chat, formulários e integrações."><img src="assets/js.png" alt="">JavaScript</div>
+                <div class="tech-pill reveal" data-ext-tip="React é indicado para interfaces modernas, painéis e aplicações escaláveis."><img src="assets/react.png" alt="">React</div>
+                <div class="tech-pill reveal" data-ext-tip="Node.js permite APIs rápidas, integrações e backends em JavaScript."><img src="assets/nodejs.png" alt="">Node.js</div>
+                <div class="tech-pill reveal" data-ext-tip="Python é forte para automações, dados, IA e scripts internos."><img src="assets/python.png" alt="">Python</div>
+                <div class="tech-pill reveal" data-ext-tip="MySQL organiza dados relacionais com estabilidade."><img src="assets/mysql.png" alt="">MySQL</div>
+                <div class="tech-pill reveal" data-ext-tip="MongoDB ajuda em aplicações flexíveis, dados dinâmicos e protótipos ágeis."><img src="assets/mongodb.png" alt="">MongoDB</div>
+                <div class="tech-pill reveal" data-ext-tip="IA generativa para atendimento, conteúdo, triagem e recursos inteligentes."><svg><use href="#icon-bot"></use></svg>IA generativa</div>
+                <div class="tech-pill reveal" data-ext-tip="APIs conectam sistemas, pagamentos, WhatsApp, bancos e serviços externos."><svg><use href="#icon-code"></use></svg>APIs</div>
+                <div class="tech-pill reveal" data-ext-tip="Firebase acelera apps com autenticação, banco e recursos cloud."><svg><use href="#icon-zap"></use></svg>Firebase</div>
+                <div class="tech-pill reveal" data-ext-tip="Cloud permite publicar, escalar e manter sistemas online."><svg><use href="#icon-chart"></use></svg>Cloud</div>
+            </div>
+        </section>
+
+        <section class="about section-panel" id="about">
+            <article class="founder-card reveal tilt-card" data-ext-tip="Área de autoridade: apresenta Alex Almeida como responsável técnico e criativo pela Express Technology.">
+                <img src="assets/img-20241025-wa0121.jpg" alt="Alex Almeida">
+                <div>
+                    <p class="eyebrow">Fundador</p>
+                    <h2>Alex Almeida</h2>
+                    <p>
+                        Desenvolvedor e fundador da Express Technology, criando soluções que unem design, código, segurança, automação e inteligência artificial para entregar projetos com aparência premium e utilidade prática.
+                    </p>
+                    <button class="btn secondary magnetic" type="button" id="open-founder" data-ext-tip="Abre uma apresentação rápida sobre a trajetória e proposta técnica de Alex.">
+                        Ver trajetória
+                        <svg><use href="#icon-arrow"></use></svg>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section class="projects section-panel" id="projects">
+            <div class="section-heading reveal" data-ext-tip="Projetos reais já feitos. As imagens e links serão adicionados depois, conforme você anexar os materiais.">
+                <p class="eyebrow">Projetos e produtos</p>
+                <h2>Cases em breve com links, imagens e galerias completas.</h2>
+                <p>Os títulos já estão organizados. Quando você enviar imagens e URLs, cada card poderá abrir o site publicado ou uma página de biografia do app/sistema.</p>
+            </div>
+            <div class="project-grid upcoming-grid">
+                <article class="project-card upcoming reveal tilt-card" data-case="DormusVet" data-ext-tip="DormusVet: card reservado para o site publicado, imagens e descrição do case.">
+                    <div class="project-glow"><svg><use href="#icon-clock"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>DormusVet</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+                <article class="project-card upcoming reveal tilt-card" data-case="Macena Engenharia" data-ext-tip="Macena Engenharia: card pronto para receber link, thumbnail e detalhes do projeto.">
+                    <div class="project-glow"><svg><use href="#icon-clock"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>Macena Engenharia</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+                <article class="project-card upcoming reveal tilt-card" data-case="Eletric Serviços Engenharia" data-ext-tip="Eletric Serviços Engenharia: case de site institucional, aguardando link e imagens finais.">
+                    <div class="project-glow"><svg><use href="#icon-clock"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>Eletric Serviços Engenharia</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+                <article class="project-card upcoming reveal tilt-card" data-case="AgroAPP" data-ext-tip="AgroAPP: aplicativo pronto para futura galeria, telas e biografia do produto.">
+                    <div class="project-glow"><svg><use href="#icon-app"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>AgroAPP</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+                <article class="project-card upcoming reveal tilt-card" data-case="ClickServices" data-ext-tip="ClickServices: app de serviços com espaço reservado para apresentação visual e funcionalidades.">
+                    <div class="project-glow"><svg><use href="#icon-app"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>ClickServices</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+                <article class="project-card upcoming reveal tilt-card" data-case="PayAll" data-ext-tip="PayAll: programa sob medida, preparado para receber galeria, história e detalhes técnicos.">
+                    <div class="project-glow"><svg><use href="#icon-chart"></use></svg></div>
+                    <span>Em breve</span>
+                    <h3>PayAll</h3>
+                    <button type="button" class="case-link">Prévia do case</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact section-panel" id="contact">
+            <div class="contact-copy reveal" data-ext-tip="Última seção de conversão: chama o visitante para virar lead agora.">
+                <p class="eyebrow">Pronto para começar?</p>
+                <h2>Seu próximo sistema, site ou app pode sair do papel agora.</h2>
+                <p>Conte o que você precisa. A Express Technology transforma a ideia em planejamento, interface, código e entrega funcional.</p>
+            </div>
+            <form class="budget-form reveal tilt-card" id="budget-form" data-ext-tip="Formulário direto para contratação: o cliente informa contato, assunto e uma mensagem rápida para a Express Technology retornar com proposta.">
+                <p class="form-label">Contrate a Express</p>
+                <h3>Vamos transformar sua ideia em projeto?</h3>
+                <p class="form-intro">Preencha o essencial e eu preparo um e-mail direto para a equipe entender sua necessidade e retornar com o próximo passo.</p>
+                <label>
+                    Nome
+                    <input type="text" id="lead-name" name="name" autocomplete="name" placeholder="Seu nome" required>
+                </label>
+                <label>
+                    Telefone
+                    <input type="tel" id="lead-phone" name="phone" autocomplete="tel" placeholder="Seu WhatsApp ou telefone" required>
+                </label>
+                <label>
+                    Assunto
+                    <select id="lead-subject" name="subject" required>
+                        <option value="Quero contratar um site profissional">Site profissional</option>
+                        <option value="Quero contratar um sistema sob medida">Sistema sob medida</option>
+                        <option value="Quero contratar um aplicativo">Aplicativo</option>
+                        <option value="Quero contratar automações">Automação</option>
+                        <option value="Quero contratar IA ou bot inteligente">IA ou bot inteligente</option>
+                        <option value="Quero contratar cyber segurança">Cyber segurança</option>
+                    </select>
+                </label>
+                <label>
+                    Mensagem
+                    <textarea id="lead-message" name="message" rows="4" placeholder="Conte rapidamente o que você precisa." required></textarea>
+                </label>
+                <p class="privacy-note">Coletamos apenas dados de contato e contexto do projeto. Não envie documentos, senhas ou informações sensíveis.</p>
+                <button class="btn primary magnetic" type="submit">Preparar e-mail <svg><use href="#icon-arrow"></use></svg></button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+            <div class="contact-panel reveal tilt-card" data-ext-tip="Painel de contato com os caminhos mais rápidos para contratar ou pedir orçamento.">
+                <a class="btn primary magnetic" href="https://wa.me/5593981137014?text=Olá,%20quero%20contratar%20um%20serviço%20da%20Express%20Technology." target="_blank" rel="noreferrer">WhatsApp <svg><use href="#icon-arrow"></use></svg></a>
+                <a class="btn secondary magnetic" href="https://www.instagram.com/_express_technology/" target="_blank" rel="noreferrer">Instagram</a>
+                <a class="btn secondary magnetic" href="mailto:expresstechnology.contato@gmail.com">E-mail</a>
+                <button class="btn secondary magnetic" type="button" data-open-chat>Briefing com EXT</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-ext-tip="Rodapé premium com promessa final, contatos e posicionamento da Express Technology.">
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="Express Technology">
+            <div>
+                <strong>Express Technology</strong>
+                <p>Sites, sistemas, IA, apps, automações e cyber segurança para empresas que querem tecnologia com presença.</p>
+            </div>
+        </div>
+        <div class="footer-cta">
+            <p>Transforme visitantes em clientes e processos em sistemas.</p>
+            <a class="btn primary magnetic" href="https://wa.me/5593981137014?text=Olá,%20quero%20falar%20com%20a%20Express%20Technology." target="_blank" rel="noreferrer">Contratar agora</a>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Express Technology. Todos os direitos reservados. CNPJ: 58.558.521/0001-49</span>
+            <nav>
+                <a href="https://www.instagram.com/_express_technology/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://wa.me/5593981137014" target="_blank" rel="noreferrer">WhatsApp</a>
+                <a href="https://github.com/Alexsandro-Almeida" target="_blank" rel="noreferrer">GitHub</a>
+            </nav>
+        </div>
+    </footer>
+
+    <div class="modal" id="founder-modal" aria-hidden="true">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="founder-title">
+            <button class="modal-close magnetic" type="button" id="close-founder" aria-label="Fechar">&times;</button>
+            <p class="eyebrow">Sobre Alex</p>
+            <h2 id="founder-title">Tecnologia com estratégia, código e entrega.</h2>
+            <p>Alex Almeida une estudo técnico, visão criativa e execução prática para criar soluções digitais que não ficam apenas bonitas: elas ajudam empresas a vender, atender, organizar e crescer.</p>
+            <p>A Express Technology nasce dessa proposta: transformar problemas reais em sistemas, apps, automações, sites e assistentes inteligentes.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="case-modal" aria-hidden="true">
+        <div class="modal-panel case-modal-panel" role="dialog" aria-modal="true" aria-labelledby="case-title">
+            <button class="modal-close magnetic" type="button" id="close-case" aria-label="Fechar">&times;</button>
+            <p class="eyebrow">Case em breve</p>
+            <h2 id="case-title">Projeto</h2>
+            <p id="case-description">Este espaço está pronto para receber imagens, link publicado, galeria e detalhes do projeto.</p>
+            <div class="case-structure">
+                <span>Problema</span>
+                <span>Solução</span>
+                <span>Tecnologias</span>
+                <span>Resultado</span>
+            </div>
+            <p class="privacy-note">Quando você anexar imagens e URLs, este card poderá direcionar para o site em ar ou para uma página completa do case.</p>
+        </div>
+    </div>
+
+    <button class="ext-launcher magnetic" type="button" data-open-chat aria-label="Abrir assistente EXT" data-ext-tip="Clique para abrir o EXT. Ele pode orientar seu cliente e preparar uma conversa de venda.">
+        <img src="assets/ext-e.png" alt="">
+        <span>EXT</span>
+    </button>
+
+    <aside class="chat" id="chat" aria-hidden="true">
+        <header class="chat-header">
+            <div>
+                <strong>EXT</strong>
+                <span>Assistente dinâmico da Express Technology</span>
+            </div>
+            <button type="button" id="close-chat" aria-label="Fechar chat">&times;</button>
+        </header>
+        <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
+        <div class="quick-actions" id="quick-actions"></div>
+        <form class="chat-form" id="chat-form">
+            <input id="chat-input" type="text" autocomplete="off" placeholder="Digite sua mensagem..." aria-label="Mensagem para o EXT">
+            <button type="submit">Enviar</button>
+        </form>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
